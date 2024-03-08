@@ -1,8 +1,6 @@
 import streamlit as st
-from utils import config
 
-def set_bg_image(image_path, opacity=0.9):  # Increase opacity for better visibility
-
+def set_bg_image(image_path, opacity=0):  # Adjust opacity as needed
     st.markdown(f"""
     <style>
     .stApp {{

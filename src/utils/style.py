@@ -1,6 +1,8 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
 
-def set_bg_image(image_path, opacity=0):  # Adjust opacity as needed
+def set_bg_image(image_path, opacity=0.1):  # Adjust opacity as needed
     st.markdown(f"""
     <style>
     .stApp {{
@@ -11,3 +13,6 @@ def set_bg_image(image_path, opacity=0):  # Adjust opacity as needed
     }}
     </style>
     """, unsafe_allow_html=True)
+
+def create_interface():
+    print('')

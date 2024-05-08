@@ -7,7 +7,6 @@ def main():
     # Set style
     st.set_page_config(layout="wide",initial_sidebar_state="collapsed",page_icon = config.favicon)
 
-    style.set_bg_image(config.background)
     style.display_logo(config.logo_boa)
 
     landing_page.display_landing_page(config.explorator,config.generator)

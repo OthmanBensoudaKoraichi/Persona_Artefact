@@ -1,8 +1,8 @@
 background = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/BOA_BG.jpg?raw=true"
 data_boa = "/Users/othmanbensouda/PycharmProjects/Persona_Artefact/sample_data_boa.xlsx"
-generator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/generator.jpg?raw=true"
+generator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/generator.png?raw=true"
 logo_boa = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/logo_boa.png?raw=true"
-explorator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/explorator.jpg?raw=true"
+explorator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/explorator.png?raw=true"
 favicon = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/boa_favicon.png?raw=true"
 
 # Persona presentations

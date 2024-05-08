@@ -10,7 +10,7 @@ def main():
     style.set_bg_image(config.background)
     style.display_logo(config.logo_boa)
 
-    landing_page.display_landing_page()
+    landing_page.display_landing_page(config.explorator,config.generator)
 
 if __name__ == "__main__":
     main()

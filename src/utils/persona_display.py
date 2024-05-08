@@ -1,9 +1,7 @@
 import streamlit as st
-import src.utils.config as config
-
-def display_persona_in_sidebar(persona : str):
-
-# Get image url that will be displayed in the sidebar
+from src.utils import config
+def display_persona_in_sidebar(persona: str):
+    # Get image url that will be displayed in the sidebar
     persona_image_url = config.persona_images[persona]
 
     with st.sidebar:
@@ -17,11 +15,26 @@ def display_persona_in_sidebar(persona : str):
                 margin-right: auto;
                 width: 60%;  /* Adjust the width as needed */
                 height: auto;
-                border-radius: 20%;  /* Adjust for desired roundness */
-                box-shadow:
-                    0 0 10px rgba(150, 150, 150, 0.6),  /* Light grey, smaller spread */
-                    0 0 10px rgba(120, 120, 120, 0.5),  /* Medium grey, medium spread */
-                    0 0 20px rgba(90, 90, 90, 0.4);     /* Darker grey, larger spread */
+                border-radius: 50%;  /* Perfect circle */
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Soft shadow around the image */
+            }}
+            .content-box {{
+                background-color: #FBFBFB;  /* Stylish light grey background */
+                padding: 20px;              /* Padding around the content */
+                border-radius: 8px;        /* Rounded corners for the box */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+                margin: 10px 0;             /* Vertical spacing between elements */
+            }}
+            .big-font, .regular-sidebar-font {{
+                font-size: 20px;  /* Consistent font size */
+                overflow-y: auto;
+                word-wrap: break-word;
+                white-space: normal;
+                text-align: justify;
+            }}
+            .big-font {{
+                font-size: 25px; /* Larger font size for headers */
+                text-align: center;
             }}
             </style>
             <img src="{persona_image_url}">
@@ -29,42 +42,18 @@ def display_persona_in_sidebar(persona : str):
             unsafe_allow_html=True
         )
 
-        # Inject custom CSS for font size, vertical scrolling, and text wrap
-        st.markdown(
-            """
-            <style>
-            .big-font {
-                font-size: 30px; /* Adjust size as needed */
-                overflow-y: auto; /* Enables vertical scrolling */
-                word-wrap: break-word; /* Ensures words do not extend outside the container */
-                white-space: normal; /* Overrides any other whitespace settings that might prevent wrapping */
-                text-align: center;
-            }
-            .regular-sidebar-font {
-                font-size: 20px; /* Smaller font size for regular content */
-                overflow-y: auto;
-                word-wrap: break-word;
-                white-space: normal;
-                text-align: justify;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-
-        header_content = """
-        <div class="big-font">
-            <strong>Sophia, 48 ans</strong><br>
-            <strong>Expatriée de Retour</strong><br>
-            <strong>Consultant en gestion</strong><br><br>
+        # Dynamic header content based on persona
+        header_content = f"""
+        <div class="big-font content-box">
+            <strong>{config.persona_info[persona]}</strong>
         </div>
         """
+
         # Display the header content within a markdown element, enabling HTML
         st.markdown(header_content, unsafe_allow_html=True)
 
         body_content = config.persona_descriptions[persona]
-        # Appliquer la classe au conteneur parent
-        st.markdown(f"<div class='regular-sidebar-font'>{body_content}</div>", unsafe_allow_html=True)
+        # Apply the class to the parent container
+        st.markdown(f"<div class='regular-sidebar-font content-box'>{body_content}</div>", unsafe_allow_html=True)
 
     return
-

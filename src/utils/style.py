@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-def set_bg_image(image_path, opacity=0.1):  # Adjust opacity as needed
+def set_bg_image(image_path, opacity=0):  # Adjust opacity as needed
     st.markdown(f"""
     <style>
     .stApp {{
@@ -14,5 +14,18 @@ def set_bg_image(image_path, opacity=0.1):  # Adjust opacity as needed
     </style>
     """, unsafe_allow_html=True)
 
-def create_interface():
-    print('')
+def display_logo(logo_path):
+    # CSS pour centrer l'image du logo
+    st.markdown("""
+        <style>
+        header .css-1tkidbn.e1fqkh3o3 {
+            justify-content: center;  /* Centrer le contenu dans l'en-tête */
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+    # Remplacer 'url_or_path_to_your_logo.png' par le chemin ou l'URL de votre logo
+    st.image(logo_path, width=500)  # Ajustez la largeur selon vos besoins
+
+    return
+

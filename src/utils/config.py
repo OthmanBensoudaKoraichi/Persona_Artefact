@@ -1,9 +1,9 @@
-background = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/BOA.jpg?raw=true"
+background = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/BOA_BG.jpg?raw=true"
 data_boa = "/Users/othmanbensouda/PycharmProjects/Persona_Artefact/sample_data_boa.xlsx"
 generator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/generator.jpg?raw=true"
 logo_boa = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/logo_boa.png?raw=true"
 explorator = "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/explorator.png?raw=true"
-
+favicon =
 
 # Persona presentations
 persona_images = {
@@ -13,8 +13,6 @@ persona_images = {
     "fourth_persona": "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/Sophia_resized.png?raw=true",
     "fifth_persona": "https://github.com/OthmanBensoudaKoraichi/Persona_Artefact/blob/master/imgs/Amine_resized.png?raw=true"
 }
-
-
 
 persona_descriptions = {
     "first_persona": """
@@ -32,4 +30,12 @@ persona_descriptions = {
     "fifth_persona": """
         Bonjour, je m'appelle Karim et je suis enseignant. Je suis dévoué à l'éducation et à l'engagement communautaire. Je cherche une banque qui reflète mes valeurs de service et de responsabilité sociale, offrant des programmes de soutien à l'éducation et des initiatives communautaires, ainsi que des services bancaires simples et accessibles pour gérer mes finances quotidiennes.
     """
+}
+
+persona_info = {
+    "first_persona": "Sophia, 45 ans<br>L'Expatriée de retour<br>Consultante en gestion",
+    "second_persona": "Amine, 28 ans<br>Le Jeune Professionnel Urbain<br>Architecte",
+    "third_persona": "Lina, 32 ans<br>L'entrepreneur Créative<br>Graphique designer indépendente",
+    "fourth_persona": "Hanae, 40 ans<br>Le Cadre Supérieur",
+    "fifth_persona": "Karim, 36 ans<br>Le Fonctionnaire Engagé<br>Enseignant"
 }
